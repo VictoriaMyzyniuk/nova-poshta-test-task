@@ -23,9 +23,8 @@ export const fetchInfo = createAsyncThunk(
     };
     try {
       const response = await axios.post(axios.defaults.baseURL, data);
-      // console.log(response.data);
 
-      return response.data;
+      return response.data.data[0];
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
