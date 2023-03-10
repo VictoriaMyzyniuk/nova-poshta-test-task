@@ -28,8 +28,7 @@ const TtnInput = () => {
 
   useEffect(() => {
     setFieldValue('ttnNumber', ttnSelectedNumber);
-    console.log('ttnSelectedNumber in useeffect', ttnSelectedNumber);
-  }, [ttnSelectedNumber]);
+  }, [ttnSelectedNumber, setFieldValue]);
 
   return (
     <>

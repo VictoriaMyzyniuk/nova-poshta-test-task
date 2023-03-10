@@ -1,7 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Layout } from 'components/Layout/Layout';
-import { useDispatch } from 'react-redux';
-import { useEffect, lazy } from 'react';
+
+import { lazy } from 'react';
 
 const CheckTtn = lazy(() => import('pages/CheckTtn/CheckTtn'));
 const DepartmentList = lazy(() =>
