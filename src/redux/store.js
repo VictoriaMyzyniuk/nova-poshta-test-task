@@ -15,12 +15,11 @@ import { infoReducer } from './slice';
 const infoPersistConfig = {
   key: 'info',
   storage,
+  blacklist: ['selectedNumber'],
 };
 
 export const store = configureStore({
   reducer: {
-    // auth: persistReducer(authPersistConfig, authReducer),
-    // contacts: contactsReducer,
     info: persistReducer(infoPersistConfig, infoReducer),
   },
   middleware: getDefaultMiddleware =>

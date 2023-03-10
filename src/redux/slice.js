@@ -2,8 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchInfo } from 'redux/operations';
 
 const initialState = {
-  info: {},
-  // ttnNumber: null,
+  ttnInfo: {},
+  selectedNumber: '',
+  ttnNumbersList: [],
   infoError: false,
   isLoading: false,
 };
@@ -15,6 +16,10 @@ const infoSlice = createSlice({
     updateError(state, action) {
       state.infoError = action.payload;
     },
+    updateSelectedNumber(state, action) {
+      state.selectedNumber = action.payload;
+      // console.log('action.payload', action.payload);
+    },
   },
   extraReducers: {
     [fetchInfo.pending](state, action) {
@@ -22,8 +27,13 @@ const infoSlice = createSlice({
       state.isLoading = true;
     },
     [fetchInfo.fulfilled](state, action) {
-      state.info = action.payload;
+      state.ttnInfo = action.payload;
       state.isLoading = false;
+      const currentTtnNumber = action.payload.Number;
+      if (!state.ttnNumbersList.includes(currentTtnNumber)) {
+        state.ttnNumbersList.push(currentTtnNumber);
+      }
+      state.selectedNumber = currentTtnNumber;
     },
     [fetchInfo.rejected](state, action) {
       state.isLoading = false;
@@ -32,6 +42,6 @@ const infoSlice = createSlice({
   },
 });
 
-export const { updateError } = infoSlice.actions;
+export const { updateError, updateSelectedNumber } = infoSlice.actions;
 
 export const infoReducer = infoSlice.reducer;
