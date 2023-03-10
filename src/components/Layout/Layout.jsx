@@ -4,7 +4,6 @@ import { Nav } from 'components/Nav/Nav';
 import { Suspense } from 'react';
 
 export const Layout = () => {
-  console.log('layout render');
   return (
     <>
       <Nav />

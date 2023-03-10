@@ -18,7 +18,6 @@ const infoSlice = createSlice({
     },
     updateSelectedNumber(state, action) {
       state.selectedNumber = action.payload;
-      // console.log('action.payload', action.payload);
     },
   },
   extraReducers: {

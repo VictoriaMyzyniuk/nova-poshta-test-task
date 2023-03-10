@@ -42,8 +42,6 @@ export const SearchForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = values => {
-    console.log(values);
-
     dispatch(fetchInfo(values.ttnNumber));
   };
 
