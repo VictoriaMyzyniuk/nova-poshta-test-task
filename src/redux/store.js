@@ -10,11 +10,18 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import { infoReducer } from './slice';
+
+const infoPersistConfig = {
+  key: 'info',
+  storage,
+};
 
 export const store = configureStore({
   reducer: {
     // auth: persistReducer(authPersistConfig, authReducer),
     // contacts: contactsReducer,
+    info: persistReducer(infoPersistConfig, infoReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
