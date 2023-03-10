@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/432.a122d2f0.chunk.js","mappings":"iMAAe,SAASA,IACtB,OAAO,2CACR,C","sources":["pages/DepartmentList/DepartmentList.jsx"],"sourcesContent":["export default function DepartmentList() {\n  return <div>DepartmentList</div>;\n}\n"],"names":["DepartmentList"],"sourceRoot":""}
