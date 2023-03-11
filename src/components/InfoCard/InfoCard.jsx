@@ -1,50 +1,34 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchInfo } from 'redux/operations';
-import { selectInfo, selectNumbersList } from 'redux/selectors';
-
-import { updateSelectedNumber } from 'redux/slice';
+import { useSelector } from 'react-redux';
+import { selectInfo } from 'redux/selectors';
 
 export const InfoCard = () => {
-  const { Status, WarehouseRecipient, WarehouseSender } =
-    useSelector(selectInfo);
-  const requestHistory = useSelector(selectNumbersList);
-
-  const dispatch = useDispatch();
-
-  const handleClick = clickedNumber => {
-    dispatch(updateSelectedNumber(clickedNumber));
-
-    dispatch(fetchInfo(clickedNumber));
-  };
+  const cargoInfo = useSelector(selectInfo);
+  const {
+    Status,
+    StatusCode,
+    WarehouseRecipient,
+    WarehouseSender,
+    CitySender,
+    CityRecipient,
+  } = cargoInfo;
   return (
     <>
       <div>
         Статус доставки:
-        {Status}
+        {StatusCode === '3' ? (
+          <div>Номер ТТН не знайдено. Перевірте номер та спробуйте ще раз</div>
+        ) : (
+          Status
+        )}
       </div>
       <div>
         Відправлено:
-        {WarehouseSender}
+        {WarehouseSender}/{CitySender}
       </div>
       <div>
         Отримано:
-        {WarehouseRecipient}
+        {WarehouseRecipient}/{CityRecipient}
       </div>
-      <ul>
-        Історія
-        {requestHistory.map(item => {
-          return (
-            <li
-              key={item}
-              onClick={() => {
-                handleClick(item);
-              }}
-            >
-              {item}
-            </li>
-          );
-        })}
-      </ul>
     </>
   );
 };
