@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/nova-poshta-test-task/static/css/main.7acaea2f.css",
-    "main.js": "/nova-poshta-test-task/static/js/main.b045a31a.js",
-    "static/js/663.3b72ed47.chunk.js": "/nova-poshta-test-task/static/js/663.3b72ed47.chunk.js",
-    "static/js/432.a122d2f0.chunk.js": "/nova-poshta-test-task/static/js/432.a122d2f0.chunk.js",
-    "static/js/568.1d3e04ba.chunk.js": "/nova-poshta-test-task/static/js/568.1d3e04ba.chunk.js",
+    "main.js": "/nova-poshta-test-task/static/js/main.3738a238.js",
+    "static/js/525.c6c40cfc.chunk.js": "/nova-poshta-test-task/static/js/525.c6c40cfc.chunk.js",
+    "static/js/607.eeda2184.chunk.js": "/nova-poshta-test-task/static/js/607.eeda2184.chunk.js",
+    "static/js/449.c9c30a8a.chunk.js": "/nova-poshta-test-task/static/js/449.c9c30a8a.chunk.js",
     "index.html": "/nova-poshta-test-task/index.html",
     "main.7acaea2f.css.map": "/nova-poshta-test-task/static/css/main.7acaea2f.css.map",
-    "main.b045a31a.js.map": "/nova-poshta-test-task/static/js/main.b045a31a.js.map",
-    "663.3b72ed47.chunk.js.map": "/nova-poshta-test-task/static/js/663.3b72ed47.chunk.js.map",
-    "432.a122d2f0.chunk.js.map": "/nova-poshta-test-task/static/js/432.a122d2f0.chunk.js.map",
-    "568.1d3e04ba.chunk.js.map": "/nova-poshta-test-task/static/js/568.1d3e04ba.chunk.js.map"
+    "main.3738a238.js.map": "/nova-poshta-test-task/static/js/main.3738a238.js.map",
+    "525.c6c40cfc.chunk.js.map": "/nova-poshta-test-task/static/js/525.c6c40cfc.chunk.js.map",
+    "607.eeda2184.chunk.js.map": "/nova-poshta-test-task/static/js/607.eeda2184.chunk.js.map",
+    "449.c9c30a8a.chunk.js.map": "/nova-poshta-test-task/static/js/449.c9c30a8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.b045a31a.js"
+    "static/js/main.3738a238.js"
   ]
 }
