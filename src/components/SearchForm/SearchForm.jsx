@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchInfo } from 'redux/operations';
-import { selectSelectedNumber } from 'redux/selectors';
+import { selectError, selectSelectedNumber } from 'redux/selectors';
 
 import { Formik, Form, Field, ErrorMessage, useFormikContext } from 'formik';
 import * as yup from 'yup';
@@ -9,13 +9,8 @@ import { useEffect } from 'react';
 const schema = yup.object().shape({
   ttnNumber: yup
     .string()
-    // .min(4)
-    // .max(10)
-    // .matches(
-    //   /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/,
-    //   'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
-    // )
-    .required(),
+    .matches(/^\d{14}$/, 'Введіть 14 цифр')
+    .required("Поле обов'язкове для заповнення"),
 });
 
 const initialValues = {
@@ -24,6 +19,7 @@ const initialValues = {
 
 const TtnInput = () => {
   const { setFieldValue } = useFormikContext();
+
   const ttnSelectedNumber = useSelector(selectSelectedNumber);
 
   useEffect(() => {
@@ -32,14 +28,15 @@ const TtnInput = () => {
 
   return (
     <>
-      <Field type="number" name="ttnNumber" placeholder="Введіть номер ТТН" />
-      <ErrorMessage name="name" component="div" />
+      <Field type="text" name="ttnNumber" placeholder="Введіть номер ТТН" />
+      <ErrorMessage name="ttnNumber" component="div" />
     </>
   );
 };
 
 export const SearchForm = () => {
   const dispatch = useDispatch();
+  const error = useSelector(selectError);
 
   const handleSubmit = values => {
     dispatch(fetchInfo(values.ttnNumber));
@@ -53,8 +50,8 @@ export const SearchForm = () => {
     >
       <Form>
         <TtnInput />
-
-        <button>Отримати статус ТТН</button>
+        {error && <div>Невірний номер ТТН</div>}
+        <button type="submit">Отримати статус ТТН</button>
       </Form>
     </Formik>
   );
