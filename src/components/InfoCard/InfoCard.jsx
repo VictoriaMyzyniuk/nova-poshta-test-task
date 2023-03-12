@@ -22,9 +22,9 @@ export const InfoCard = () => {
       <InfoEl>
         Статус доставки:
         {StatusCode === '3' ? (
-          <InfoEl>
+          <InfoElContent>
             Номер ТТН не знайдено. Перевірте номер та спробуйте ще раз
-          </InfoEl>
+          </InfoElContent>
         ) : (
           <InfoElContent>{Status}</InfoElContent>
         )}

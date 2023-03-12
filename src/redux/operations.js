@@ -37,14 +37,14 @@ export const fetchInfo = createAsyncThunk(
 export const fetchDepartments = createAsyncThunk(
   'department/fetchDepartment',
 
-  async (city, thunkAPI) => {
+  async ({ city, page }, thunkAPI) => {
     const data = {
       apiKey: API_KEY,
       modelName: 'Address',
       calledMethod: 'getWarehouses',
       methodProperties: {
         CityName: city,
-        Page: '1',
+        Page: page,
         Limit: '20',
         Language: 'UA',
       },
@@ -53,7 +53,10 @@ export const fetchDepartments = createAsyncThunk(
       const response = await axios.post(axios.defaults.baseURL, data);
 
       if (response.data.data.length) {
-        return response.data.data;
+        return {
+          data: response.data.data,
+          totalCount: response.data.info.totalCount,
+        };
       } else {
         return thunkAPI.rejectWithValue('Такого міста немає у списку');
       }

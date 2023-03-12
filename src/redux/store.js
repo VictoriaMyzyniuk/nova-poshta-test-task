@@ -15,7 +15,15 @@ import { infoReducer } from './slice';
 const infoPersistConfig = {
   key: 'info',
   storage,
-  blacklist: ['selectedNumber', 'infoError', 'departmentsError', 'ttnInfo'],
+  blacklist: [
+    'selectedNumber',
+    'infoError',
+    'departmentsError',
+    'ttnInfo',
+    'departmentsList',
+    'page',
+    'city',
+  ],
 };
 
 export const store = configureStore({

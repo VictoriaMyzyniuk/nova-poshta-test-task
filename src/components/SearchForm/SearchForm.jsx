@@ -9,6 +9,8 @@ import {
   InputEl,
   SubmitButton,
   Error,
+  InfoError,
+  InputWrapper,
 } from 'components/SearchForm/SearchForm.styled';
 
 import * as yup from 'yup';
@@ -44,7 +46,8 @@ const TtnInput = () => {
 
 export const SearchForm = () => {
   const dispatch = useDispatch();
-  const error = useSelector(selectError);
+  let error = useSelector(selectError);
+  console.log(error);
 
   const handleSubmit = values => {
     dispatch(fetchInfo(values.ttnNumber));
@@ -57,9 +60,11 @@ export const SearchForm = () => {
       onSubmit={handleSubmit}
     >
       <FormEl>
-        <TtnInput />
-        {error && <div>Невірний номер ТТН</div>}
-        <SubmitButton type="submit">Отримати статус ТТН</SubmitButton>
+        <InputWrapper>
+          <TtnInput />
+          <InfoError error={error}>Невірний номер ТТН</InfoError>
+        </InputWrapper>
+        <SubmitButton type="submit">Отримати статус</SubmitButton>
       </FormEl>
     </Formik>
   );
