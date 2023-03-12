@@ -1,9 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import { StyledNavLink, NavEl } from 'components/Nav/Nav.styled';
 export const Nav = () => {
   return (
-    <nav>
-      <NavLink to="/">Перевірити ТТН</NavLink>
-      <NavLink to="/list">Список відділень</NavLink>
-    </nav>
+    <header>
+      <NavEl>
+        <StyledNavLink to="/">Перевірити ТТН</StyledNavLink>
+        <StyledNavLink to="/list">Список відділень</StyledNavLink>
+      </NavEl>
+    </header>
   );
 };

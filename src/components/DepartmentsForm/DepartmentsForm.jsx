@@ -1,8 +1,15 @@
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import * as yup from 'yup';
 
 import { fetchDepartments } from 'redux/operations';
+
+import {
+  FormEl,
+  InputEl,
+  SubmitButton,
+  Error,
+} from 'components/SearchForm/SearchForm.styled';
 
 const schema = yup.object().shape({
   cityName: yup
@@ -34,11 +41,15 @@ export const DepartmentsForm = () => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
-      <Form>
-        <Field type="text" name="cityName" placeholder="Введіть назву міста" />
-        <ErrorMessage name="cityName" component="div" />
-        <button type="submit">Шукати відділення</button>
-      </Form>
+      <FormEl>
+        <InputEl
+          type="text"
+          name="cityName"
+          placeholder="Введіть назву міста"
+        />
+        <Error name="cityName" component="div" />
+        <SubmitButton type="submit">Шукати відділення</SubmitButton>
+      </FormEl>
     </Formik>
   );
 };

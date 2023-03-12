@@ -2,7 +2,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchInfo } from 'redux/operations';
 import { selectError, selectSelectedNumber } from 'redux/selectors';
 
-import { Formik, Form, Field, ErrorMessage, useFormikContext } from 'formik';
+import { Formik, useFormikContext } from 'formik';
+
+import {
+  FormEl,
+  InputEl,
+  SubmitButton,
+  Error,
+} from 'components/SearchForm/SearchForm.styled';
+
 import * as yup from 'yup';
 import { useEffect } from 'react';
 
@@ -28,8 +36,8 @@ const TtnInput = () => {
 
   return (
     <>
-      <Field type="text" name="ttnNumber" placeholder="Введіть номер ТТН" />
-      <ErrorMessage name="ttnNumber" component="div" />
+      <InputEl type="text" name="ttnNumber" placeholder="Введіть номер ТТН" />
+      <Error name="ttnNumber" component="div" />
     </>
   );
 };
@@ -48,11 +56,11 @@ export const SearchForm = () => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
-      <Form>
+      <FormEl>
         <TtnInput />
         {error && <div>Невірний номер ТТН</div>}
-        <button type="submit">Отримати статус ТТН</button>
-      </Form>
+        <SubmitButton type="submit">Отримати статус ТТН</SubmitButton>
+      </FormEl>
     </Formik>
   );
 };
