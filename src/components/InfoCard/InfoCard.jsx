@@ -9,6 +9,7 @@ import {
 
 export const InfoCard = () => {
   const cargoInfo = useSelector(selectInfo);
+
   const {
     Status,
     StatusCode,

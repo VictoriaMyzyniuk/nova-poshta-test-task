@@ -23,6 +23,7 @@ const infoPersistConfig = {
     'departmentsList',
     'page',
     'city',
+    'isLoading',
   ],
 };
 

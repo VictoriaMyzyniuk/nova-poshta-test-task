@@ -24,12 +24,6 @@ const infoSlice = createSlice({
     updateSelectedNumber(state, action) {
       state.selectedNumber = action.payload;
     },
-    // deleteSelectedNumber(state, action) {
-    //   console.log(action.payload);
-    //   const index = state.ttnNumbersList.includes(action.payload);
-    //   console.log(index);
-    //   state.ttnNumbersList.splice(index, 1);
-    // },
     clearRequestHistory(state, action) {
       state.ttnNumbersList = [];
     },
@@ -52,8 +46,6 @@ const infoSlice = createSlice({
     [fetchInfo.fulfilled](state, action) {
       state.ttnInfo = action.payload;
       state.isLoading = false;
-      console.log(action.payload);
-
       const currentTtnNumber = action.payload.Number;
       if (!state.ttnNumbersList.includes(currentTtnNumber)) {
         state.ttnNumbersList.push(currentTtnNumber);

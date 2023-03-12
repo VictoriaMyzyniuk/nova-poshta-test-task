@@ -23,6 +23,7 @@ import { updatePage } from 'redux/slice';
 export const DepartmentsListResult = () => {
   const listOfDepartments = useSelector(selectDepartmentsList);
   const departmentsError = useSelector(selectDepartmentsError);
+
   const dispatch = useDispatch();
 
   const page = useSelector(selectPage);

@@ -3,8 +3,6 @@ import styled from '@emotion/styled';
 export const DepartmentListHeader = styled.div`
   font-size: 20px;
   font-weight: 700;
-  /* background-color: #1bad84;
-  padding: 5px; */
   text-align: center;
   border-radius: 5px;
   text-align: center;
@@ -16,12 +14,7 @@ export const DepartmentList = styled.ul`
   justify-content: center;
   list-style: none;
   flex-wrap: wrap;
-
   padding: 0;
-
-  @media screen and (min-width: 900px) {
-    /* margin: -15px; */
-  }
 `;
 
 export const DepartmentListItem = styled.li`
@@ -32,7 +25,7 @@ export const DepartmentListItem = styled.li`
 
   width: 130px;
   height: 250px;
-  border: 1px solid #39bb96;
+  border: 1px solid #cc0101;
   padding: 5px;
 
   text-align: center;
@@ -41,8 +34,7 @@ export const DepartmentListItem = styled.li`
 
   font-size: 12px;
   font-weight: 500;
-
-  background-color: #ccf9ef;
+  background-color: #fff;
 
   &:last-of-type {
     margin-bottom: 0;
@@ -58,7 +50,7 @@ export const DepartmentListItem = styled.li`
 export const DescriptionCityItem = styled.div`
   font-size: 14px;
   margin-bottom: 5px;
-  color: #0f0473;
+  color: #8b0000;
 
   @media screen and (min-width: 900px) {
     font-size: 20px;
@@ -70,7 +62,7 @@ export const DescriptionItem = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 80px;
-  border: 1px solid #1bad84;
+  border: 1px solid #cc0101;
   border-radius: 10px;
   margin-bottom: 5px;
   padding: 5px;
@@ -93,7 +85,7 @@ export const ScheduleItem = styled.div`
 export const ScheduleHeader = styled.div`
   font-size: 14px;
   margin-bottom: 5px;
-  color: #0f0473;
+  color: #8b0000;
   @media screen and (min-width: 900px) {
     font-size: 20px;
   }
@@ -103,7 +95,8 @@ export const LoadMoreButton = styled.button`
   width: 150px;
   height: 40px;
 
-  background-color: #39bb96;
+  background-color: #5d5e5e;
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 14px;
@@ -114,7 +107,7 @@ export const LoadMoreButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #05aa91;
+    background-color: #b11b1b;
   }
 `;
 

@@ -1,8 +1,4 @@
-import {
-  updateSelectedNumber,
-  // deleteSelectedNumber,
-  clearRequestHistory,
-} from 'redux/slice';
+import { updateSelectedNumber, clearRequestHistory } from 'redux/slice';
 import { selectNumbersList } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchInfo } from 'redux/operations';
@@ -33,7 +29,7 @@ export const RequestHistory = () => {
   return (
     <ListWrapper>
       <ListHeader>Історія пошуку</ListHeader>
-      <ListEl>
+      <ListEl requestHistory={requestHistory}>
         {requestHistory.map(item => {
           return (
             <ListItem key={nanoid()}>
