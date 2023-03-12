@@ -57,7 +57,7 @@ export const ListItem = styled.li`
   margin-bottom: 5px;
   font-weight: 500;
 
-  background-color: #ab0a0a1f;
+  background-color: #eb9a9a;
   cursor: pointer;
   transition: all 0.3s linear;
 

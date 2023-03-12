@@ -23,10 +23,6 @@ export const ErrorMessageDepartment = styled(ErrorMessage)`
   width: 300px;
   text-align: center;
   color: red;
-
   font-weight: 500;
   font-size: 12px;
-
-  @media screen and (min-width: 900px) {
-  }
 `;

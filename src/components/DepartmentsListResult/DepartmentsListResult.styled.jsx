@@ -94,7 +94,6 @@ export const ScheduleHeader = styled.div`
 export const LoadMoreButton = styled.button`
   width: 150px;
   height: 40px;
-
   background-color: #5d5e5e;
   color: #fff;
   border: none;
