@@ -15,13 +15,11 @@ export const StyledNavLink = styled(NavLink)`
   padding: 5px;
 
   margin-right: 10px;
+  transition: all 0.3s linear;
 
   &:last-of-type {
     margin-right: 0;
   }
-
-  /* background-color: #c1f6f6;
-  border-radius: 10px; */
 
   &.active {
     color: #031062;
@@ -30,5 +28,9 @@ export const StyledNavLink = styled(NavLink)`
   :hover:not(.active),
   :focus-visible:not(.active) {
     color: #1461c0;
+  }
+
+  @media screen and (min-width: 900px) {
+    font-size: 32px;
   }
 `;

@@ -21,10 +21,6 @@ export const RequestHistory = () => {
 
   const dispatch = useDispatch();
 
-  // const deleteNumber = item => {
-  //   dispatch(deleteSelectedNumber(item));
-  // };
-
   const clearHistory = () => {
     dispatch(clearRequestHistory());
   };
@@ -48,15 +44,6 @@ export const RequestHistory = () => {
               >
                 {item}
               </div>
-
-              {/* <button
-              type="button"
-              onClick={() => {
-                deleteNumber(item);
-              }}
-            >
-              X
-            </button> */}
             </ListItem>
           );
         })}

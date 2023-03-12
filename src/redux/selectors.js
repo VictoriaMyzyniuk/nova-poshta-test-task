@@ -9,3 +9,9 @@ export const selectSelectedNumber = state => state.info.selectedNumber;
 export const selectDepartmentsList = state => state.info.departmentsList;
 
 export const selectDepartmentsError = state => state.info.departmentsError;
+
+export const selectPage = state => state.info.page;
+
+export const selectCity = state => state.info.city;
+
+export const selectTotalCount = state => state.info.totalCount;
