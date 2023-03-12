@@ -5,13 +5,12 @@ export const InputEl = styled(Field)`
   font-size: 16px;
   width: 250px;
   height: 20px;
-
-  /* margin-bottom: 15px; */
   padding: 5px;
   border-radius: 5px;
-  outline-color: #05aa91;
-  border-color: #0aab7e;
+  outline-color: #bb3d3d;
+  border-color: #ab0a0a;
   font-weight: 700;
+  outline: none;
 
   @media screen and (min-width: 900px) {
     height: 26px;

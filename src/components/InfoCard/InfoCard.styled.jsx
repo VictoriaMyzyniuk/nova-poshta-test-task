@@ -10,7 +10,6 @@ export const InfoWrapper = styled.div`
   @media screen and (min-width: 900px) {
     align-items: flex-start;
     margin-top: 0;
-    /* justify-content: flex-start; */
   }
 `;
 
@@ -22,13 +21,16 @@ export const InfoEl = styled.div`
   width: 280px;
   height: 80px;
   font-weight: 700;
-  color: #051f75;
+  color: #cccccc;
   font-size: 16px;
-  background-color: #16a3a3;
   border-radius: 10px;
   text-align: center;
   margin-bottom: 10px;
   padding: 5px;
+  background: linear-gradient(180deg, #cb0000, #fff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 
   &:last-of-type {
     margin-bottom: 0;

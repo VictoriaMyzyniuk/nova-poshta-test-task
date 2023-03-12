@@ -47,7 +47,6 @@ const TtnInput = () => {
 export const SearchForm = () => {
   const dispatch = useDispatch();
   let error = useSelector(selectError);
-  console.log(error);
 
   const handleSubmit = values => {
     dispatch(fetchInfo(values.ttnNumber));

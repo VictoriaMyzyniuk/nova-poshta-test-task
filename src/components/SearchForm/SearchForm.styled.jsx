@@ -4,7 +4,6 @@ import { Form, Field, ErrorMessage } from 'formik';
 export const FormEl = styled(Form)`
   display: flex;
   align-items: center;
-
   flex-direction: column;
   margin-top: 20px;
 
@@ -16,7 +15,7 @@ export const FormEl = styled(Form)`
 `;
 
 export const InputWrapper = styled.div`
-  min-height: 64px;
+  min-height: 74px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -29,9 +28,10 @@ export const InputEl = styled(Field)`
   height: 20px;
   padding: 5px;
   border-radius: 5px;
-  outline-color: #05aa91;
-  border-color: #0aab7e;
+  outline-color: #bb3d3d;
+  border-color: #ab0a0a;
   font-weight: 700;
+  outline: none;
 
   @media screen and (min-width: 900px) {
     height: 26px;
@@ -42,34 +42,30 @@ export const InputEl = styled(Field)`
 export const SubmitButton = styled.button`
   width: 150px;
   height: 40px;
-  background-color: #39bb96;
+  background-color: #5d5e5e;
   border: none;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
-  outline-color: #504e4e;
+  color: #ffffff;
+
   padding: 5px;
   transition: all 0.3s linear;
 
   &:hover,
   &:focus {
-    background-color: #05aa91;
+    background-color: #b11b1b;
   }
 `;
 
 export const Error = styled(ErrorMessage)`
-  /* position: absolute; */
   width: 300px;
   text-align: center;
   color: red;
-  /* top: 101px; */
+
   font-weight: 500;
   font-size: 12px;
-
-  /* @media screen and (min-width: 900px) {
-    top: 126px;
-  } */
 `;
 
 export const InfoError = styled.div`
