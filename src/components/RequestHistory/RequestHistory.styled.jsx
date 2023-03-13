@@ -85,6 +85,6 @@ export const ClearButton = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #fff;
+    background-color: #b11b1b;
   }
 `;
